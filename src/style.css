@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0E1C36;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1acb;
+  border: 1px solid #1a92cedc;
+  color: #faf9f4;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+.bg-hero-image {
+  background-image: url('/src/assets/img/hero.png');
+  opacity: 70%;
+}
+
+.bg-app-cover {
+  background-image: url('/src/assets/img/hero.png');
+}
+
+.bg-location-cover {
+  background-image: url('/src/assets/img/hero3.jpg');
+}
+.bg-episode-cover {
+  background-image: url('/src/assets/img/slide-show-1.webp');
+}
