@@ -26,7 +26,7 @@ defineComponent({
 <template>
   <Carousel>
     <Slide v-for="slide in imageList" :key="slide">
-      <img :src="`src/assets/img/${slide}`" alt=""
+      <img :src="`/src/assets/img/${slide}`" alt=""
         class="carousel__item">
     </Slide>
     <slot></slot>

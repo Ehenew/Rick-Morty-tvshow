@@ -28,7 +28,7 @@ defineComponent({
       <h2 class="absolute top-0 left-2 bg-slate-500 px-2 text-center font-medium">
         {{ slide.name }}
       </h2>
-      <img :src="`src/assets/img/${slide.image}`" alt=""
+      <img :src="`/src/assets/img/${slide.image}`" alt=""
         class="carousel__item">
     </Slide>
 
