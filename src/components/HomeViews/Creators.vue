@@ -3,29 +3,29 @@ import Carousel from './Carousel2.vue';
 </script>
 
 <template>
-  <div
-    class="flex justify-between gap-12 my-6 mx-12"
+  <div class="sm:flex justify-between sm:my-6 my-2 mx-12"
     id="creators">
     <div class="flex flex-col gap-4">
-      <h2 class="text-2xl text-orange-600 ">Creators
-      </h2>
-      <div
-        class="flex rounded-md text-center overflow-hidden">
-        <div>
-          <img src="/src/assets/img/roiland.jpg"
-            alt="" class=" h-64 mb-1">
-          <h2>Justin Roiland Harmon</h2>
-        </div>
+      <div>
+        <h2 class="text-2xl text-orange-500 mb-4">Creators
+        </h2>
+        <div
+          class="flex rounded-md text-center overflow-hidden">
+          <div>
+            <img src="/src/assets/img/roiland.jpg" alt=""
+              class=" h-64 mb-1">
+            <h2>Justin Roiland</h2>
+          </div>
 
-        <div>
-          <img src="/src/assets/img/dan-harmon.jpg" alt=""
-            class=" h-64 w-52 mb-1">
-          <h2>Dan Harmon</h2>
+          <div>
+            <img src="/src/assets/img/dan-harmon.jpg" alt=""
+              class=" h-64 w-52 mb-1">
+            <h2>Dan Harmon</h2>
+          </div>
         </div>
       </div>
-
       <div>
-        <h2 class="text-2xl text-orange-600 ">Main
+        <h2 class="text-2xl text-orange-500 mb-3">Main
           Chracters</h2>
         <ul>
           <li>Rick Sanchez &mdash;<span
@@ -48,12 +48,11 @@ import Carousel from './Carousel2.vue';
     </div>
 
     <div>
-      <h2 class="text-2xl text-orange-600 mb-4">Stars
+      <h2 class="text-2xl text-orange-500 mb-4">Stars
       </h2>
       <Carousel />
     </div>
   </div>
 </template>
 <style scoped>
-
 </style>

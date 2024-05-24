@@ -1,10 +1,9 @@
 <script setup>
-import { useQuery } from '@vue/apollo-composable';
 import gql from "graphql-tag";
 import { ref, computed, onMounted, watch } from 'vue';
 import { ApolloClient, InMemoryCache } from '@apollo/client/core';
 import { useScrollToTop } from "../../main.js";
-
+import Spinner from '../Spinner.vue';
 const { isHomePath, scrollToTop } = useScrollToTop();
 
 const episodes = ref([]);
@@ -34,7 +33,6 @@ const GET_ALL_EPISODES = gql`
   }
 `;
 
-// Fetch all episodes from the API
 const fetchAllEpisodes = async (page = 1) => {
   try {
     const { data } = await apolloClient.query({
@@ -80,12 +78,10 @@ const episodesForSelectedSeason = computed(() => {
   return groupedEpisodes.value[ selectedSeason.value ] || [];
 });
 
-// Fetch episodes when the component is mounted
 onMounted(() => {
   fetchAllEpisodes();
 });
 
-// const { result } = useQuery(GET_ALL_EPISODES);
 
 </script>
 
@@ -105,7 +101,9 @@ onMounted(() => {
         Season {{ season }}
       </div>
     </div>
-    <div v-if="loading">Loading...</div>
+    <div v-if="loading">
+      <Spinner></Spinner>
+    </div>
     <div v-if="error">{{ error.message }} episodes</div>
     <div v-else
       class="bg-[#183f5ae9] pl-4 pr-6 lg:px-8 py-5 rounded-lg shadow-[1px_2px_4px] shadow-cyan-600">

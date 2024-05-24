@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue';
-
 const activeLink = ref('Home');
 
 const links = [
@@ -40,6 +39,7 @@ const handleClick = (linkName, href) => {
       <a v-for="link in links" :key="link.name"
         :href="link.href" :class="[
           'font-medium',
+          'hover:text-gray-400',
           { 'text-orange-500': activeLink === link.name, 'text-gray-300': activeLink !== link.name }
         ]"
         @click.prevent="handleClick(link.name, link.href)">
@@ -48,6 +48,5 @@ const handleClick = (linkName, href) => {
     </div>
   </nav>
 </template>
-
 <style scoped>
 </style>

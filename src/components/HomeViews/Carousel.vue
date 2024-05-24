@@ -4,13 +4,21 @@ import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
 
 const imageList = ref([
-  'slide-show-1.webp',
-  'slide-show-2.jpg',
-  'slide-show-3.jpg',
-  'slide-show-4.jpg',
-  'slide-show-5.jpg',
-  'slide-show-6.jpg',
+  'https://media.newyorker.com/photos/59e78cef57e38e49cd315477/master/w_1920,c_limit/Patterson-Rick-and-Morty-Show-We-Need-American-Apocalypse.jpg',
+  'https://c4.wallpaperflare.com/wallpaper/410/59/609/tv-rick-sanchez-morty-smith-rick-and-morty-wallpaper-preview.jpg',
+  'https://cdn.vox-cdn.com/thumbor/l5bnvf5oZL_KljapelfEfX1Y7AI=/1400x1050/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/9028267/Screen_Shot_2017_08_10_at_9.45.00_AM.png',
+  'https://www.indiewire.com/wp-content/uploads/2022/10/Rick-Morty-Season-6-Plates.png',
+  'https://static.independent.co.uk/2021/08/10/13/newFile-5.jpg?quality=75&width=1200&auto=webp',
+  'https://i0.wp.com/www.thewrap.com/wp-content/uploads/2023/08/rick-and-morty-5.jpg?fit=1200%2C675&ssl=1',
 ]);
+// const imageList = ref([
+//   'slide-show-1.webp',
+//   'slide-show-2.jpg',
+//   'slide-show-3.jpg',
+//   'slide-show-4.jpg',
+//   'slide-show-5.jpg',
+//   'slide-show-6.jpg',
+// ]);
 
 defineComponent({
   name: 'CarouselComp',
@@ -24,9 +32,9 @@ defineComponent({
 </script>
 
 <template>
-  <Carousel>
-    <Slide v-for="slide in imageList" :key="slide">
-      <img :src="`/src/assets/img/${slide}`" alt=""
+  <Carousel :autoplay="2000" :wrap-around="true">
+    <Slide v-for="image in imageList" :key="image">
+      <img :src="`${image}`" alt="Image"
         class="carousel__item">
     </Slide>
     <slot></slot>
@@ -45,10 +53,11 @@ defineComponent({
   overflow: hidden;
   border: 1px solid #05af3e;
   position: relative;
+  width:400px;
 }
 
 .carousel__item {
-  height: 100%;
+  height: 230px;
   width: 100%;
   color: white;
   font-size: 20px;

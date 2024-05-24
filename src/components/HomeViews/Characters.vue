@@ -1,7 +1,8 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import { RouterLink } from 'vue-router';
+import { ref, onMounted } from "vue";
+import { RouterLink } from "vue-router";
 import { useScrollToTop } from "/src/main.js";
+import Spinner from "../Spinner.vue";
 import axios from "axios";
 
 const { isHomePath, scrollToTop } = useScrollToTop();
@@ -11,7 +12,7 @@ const loading = ref(true);
 const error = ref(null);
 
 const fetchCharacters = async () => {
-  const uri = 'https://rickandmortyapi.com/graphql';
+  const uri = "https://rickandmortyapi.com/graphql";
   let page = 1;
   let allCharacters = [];
 
@@ -39,7 +40,7 @@ const fetchCharacters = async () => {
       allCharacters = allCharacters.concat(data.results);
       page = data.info.next;
     } catch (err) {
-      error.value = 'Failed to fetch characters';
+      error.value = "Failed to fetch characters";
       console.error(err);
       page = null;
     }
@@ -56,16 +57,18 @@ onMounted(() => {
 
 <template>
   <div
-    class="m-[40px] mt-4 px-10 py-6 text-center rounded-lg shadow-sm shadow-lime-500 h-screen bg-gradient-to-br from-[#384137a1] to-[#2a4325cb]">
-    <h2 class="text-2xl mb-6 text-center">
-      Characters (826)</h2>
-    <div v-if="loading">Loading...</div>
-    <div v-if="error"> {{ error }} </div>
+    class="m-[40px] mt-4 px-10 py-6 text-center rounded-lg shadow-sm shadow-lime-500 h-screen bg-gradient-to-br from-[#384137a1] to-[#2a4325cb] relative">
+    <h2 class="text-2xl mb-6 text-center">Characters (826)
+    </h2>
+    <div v-if="loading">
+      <Spinner></Spinner>
+    </div>
+    <div v-if="error">{{ error }}</div>
     <div v-else
-      class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 items-start pl-8 pr-12 py-2 overflow-y-scroll h-[80vh] ">
+      class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 items-start pl-8 pr-12 py-2 overflow-y-scroll h-[80vh]">
       <div v-for="character in characters"
         :key="character.id"
-        class=" text-gray-300 rounded-md flex gap-3 items-start ">
+        class="text-gray-300 rounded-md flex gap-3 items-start">
         <router-link
           :to="{ name: 'CharacterPage', params: { id: character.id } }">
           <div
@@ -83,7 +86,7 @@ onMounted(() => {
     </div>
 
     <router-link v-if="!isHomePath" to="/"
-      class="absolute left-16 top-8">
+      class="absolute left-16 top-5">
       <button @click="scrollToTop"
         class="mt-3 border-[1px] px-3 py-1 border-lime-700 bg-[#a5a2a225]">
         Home
@@ -92,5 +95,4 @@ onMounted(() => {
   </div>
 </template>
 <style scoped>
-
 </style>
