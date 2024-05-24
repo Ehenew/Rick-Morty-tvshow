@@ -5,7 +5,6 @@ import { ref, computed, onMounted, watch } from 'vue';
 import { ApolloClient, InMemoryCache } from '@apollo/client/core';
 import { useScrollToTop } from "../../main.js";
 
-
 const { isHomePath, scrollToTop } = useScrollToTop();
 
 const episodes = ref([]);

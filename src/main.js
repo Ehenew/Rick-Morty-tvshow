@@ -57,8 +57,6 @@ export function useScrollToTop() {
 }
 
 
-
-
 // Router configuration
 const routes = [
   { path: '/', component: Home },

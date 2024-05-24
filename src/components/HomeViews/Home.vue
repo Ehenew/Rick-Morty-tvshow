@@ -10,7 +10,7 @@ import CreatorsAndStars from './Creators.vue';
 <template>
   <div class="bg-hero-image h-screen bg-cover">
     <NavBar />
-    <div class="px-12 py-4 my-16 bg-[#31303092]">
+    <div class="px-12 py-4 my-16 bg-[#3130304c]">
       <div class="grid lg:grid-cols-[2.2fr,1fr] gap-12">
         <div class="w-[60%]">
           <h1 class="text-[#E19707] text-5xl">Rick and Morty
