@@ -7,7 +7,7 @@ import Carousel from './Carousel2.vue';
     class="flex justify-between gap-12 my-6 mx-12"
     id="creators">
     <div class="flex flex-col gap-4">
-      <h2 class="text-2xl text-orange-600 ">Creators
+      <h2 class="text-2xl text-orange-500 ">Creators
       </h2>
       <div
         class="flex rounded-md text-center overflow-hidden">
@@ -25,7 +25,7 @@ import Carousel from './Carousel2.vue';
       </div>
 
       <div>
-        <h2 class="text-2xl text-orange-600 ">Main
+        <h2 class="text-2xl text-orange-500 ">Main
           Chracters</h2>
         <ul>
           <li>Rick Sanchez &mdash;<span
@@ -48,7 +48,7 @@ import Carousel from './Carousel2.vue';
     </div>
 
     <div>
-      <h2 class="text-2xl text-orange-600 mb-4">Stars
+      <h2 class="text-2xl text-orange-500 mb-4">Stars
       </h2>
       <Carousel />
     </div>

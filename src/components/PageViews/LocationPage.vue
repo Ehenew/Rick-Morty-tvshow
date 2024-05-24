@@ -3,6 +3,7 @@ import { useQuery } from "@vue/apollo-composable";
 import gql from "graphql-tag";
 import { formatDate } from "/src/main.js";
 import { useRoute } from 'vue-router';
+import Spinner from '../Spinner.vue';
 
 const id = useRoute().params.id;
 
@@ -30,7 +31,9 @@ const { result, loading, error } = useQuery(locationQuery);
 
 <template>
   <div class="bg-location-cover bg-cover">
-    <div v-if="loading">Loading...</div>
+    <div v-if="loading">
+      <Spinner></Spinner>
+    </div>
     <div v-if="error"> {{ error.message }}
     </div>
     <div v-if="result"
@@ -51,7 +54,7 @@ const { result, loading, error } = useQuery(locationQuery);
       </div>
 
       <div
-        class="col-start-2 bg-[#242c44b0] px-2 py-2 rounded-lg w-96 text-gray-300 border-[1px] border-cyan-600">
+        class="col-start-2 bg-[#242c44cc] px-2 py-2 rounded-lg w-96 text-gray-300 border-[1px] border-cyan-600">
         <div class="flex gap-12 items-center py-1">
           <h2 class="text-xl">
             Residents ({{ result.location.residents.length
@@ -70,12 +73,12 @@ const { result, loading, error } = useQuery(locationQuery);
                 class="flex gap-4 items-center py-1 px-4 hover:bg-[#7560c07a] rounded-md">
                 <img class="w-24 h-24 rounded-md"
                   :src="resident.image" alt="">
-                <div>
-                  <h2 class="text-xl text-orange-500 mb-1">
+                <div class="text-[18px]">
+                  <h2 class="text-xl text-orange-400 mb-1">
                     {{resident.name}}
                   </h2>
                   <p :class="{
-                  'text-green-500': resident.status === 'Alive',
+                  'text-green-400': resident.status === 'Alive',
                   'text-red-500': resident.status === 'Dead'
                 }">
                     {{ resident.status }} <span
@@ -83,7 +86,7 @@ const { result, loading, error } = useQuery(locationQuery);
                       {{ resident.species }}</span>
                   </p>
                   <p>Gender: <span
-                      class="text-green-500 ml-2">{{ resident.gender }}</span>
+                      class="text-green-400 ml-2">{{ resident.gender }}</span>
                   </p>
                 </div>
               </div>
@@ -105,8 +108,8 @@ const { result, loading, error } = useQuery(locationQuery);
 
       <div
         class="flex gap-4  px-10 py-2 ml-4 row-start-2 bg-[#3333334c] w-fit h-fit">
-        <a href="#" alt="Github repostitory"
-          target="_blank">
+        <a href="https://github.com/Ehenew/Rick-Morty.git"
+          alt="Github repostitory" target="_blank">
           <i
             class="lni lni-github-original hover:text-gray-400 text-2xl"></i>
         </a>

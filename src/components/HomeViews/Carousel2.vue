@@ -4,12 +4,19 @@ import { Carousel, Pagination, Slide } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
 
 const imageList = ref([
-  { name: 'Sarah Charkel', image: 'sarah.jpg' },
-  { name: 'Jusitn Roiland', image: 'justin.jpg' },
-  { name: 'Spencer Grammer', image: 'grammer.jpg' },
-  { name: 'Chris Parnell', image: 'parnell.webp' },
-  { name: 'Raki Wahlgren', image: 'wahlgren.jpg' },
+  { name: 'Sarah Chalke', image: 'https://media.themoviedb.org/t/p/w500/ycwiu89cpjqCtSNC5FjbJggjj5R.jpg' },
+  { name: 'Jusitn Roiland', image: 'https://static.wikia.nocookie.net/adventuretimewithfinnandjake/images/2/2f/Justin_Roiland.jpg' },
+  { name: 'Spencer Grammer', image: 'https://m.media-amazon.com/images/M/MV5BMTkxNjE0NzAxMF5BMl5BanBnXkFtZTcwNjQyMjQ4Mg@@._V1_FMjpg_UX1000_.jpg' },
+  { name: 'Chris Parnell', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEVCfSbW2SCNSxfP61et4LB26Zv5cWsq1FEp7PcakZrg&s' },
+  { name: 'Raki Wahlgren', image: 'https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQJMXj0d25Qbwhw4pkepnrUVArs1gLN2d86Mwsdvcx-bYbODf3Me2gs7qqFsKuN41oyQpEssD3faJh8Ud0' },
 ]);
+// const imageList = ref([
+//   { name: 'Sarah Charkel', image: 'sarah.jpg' },
+//   { name: 'Jusitn Roiland', image: 'justin.jpg' },
+//   { name: 'Spencer Grammer', image: 'grammer.jpg' },
+//   { name: 'Chris Parnell', image: 'parnell.webp' },
+//   { name: 'Raki Wahlgren', image: 'wahlgren.jpg' },
+// ]);
 
 defineComponent({
   name: 'CarouselStars',
@@ -22,13 +29,13 @@ defineComponent({
 </script>
 
 <template>
-  <Carousel :autoplay="2000" :wrap-around="true">
+  <Carousel :autoplay="3000" :wrap-around="true">
     <Slide v-for="slide in imageList" :key="slide"
       class="flex flex-colgap-1">
       <h2 class="absolute top-0 left-2 bg-slate-500 px-2 text-center font-medium">
         {{ slide.name }}
       </h2>
-      <img :src="`/src/assets/img/${slide.image}`" alt=""
+      <img :src="`${slide.image}`" alt=""
         class="carousel__item">
     </Slide>
 
@@ -50,13 +57,12 @@ defineComponent({
 }
 
 .carousel__item {
-  /* width: 50%; */
   height: 400px;
   color: white;
   font-size: 20px;
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: start; */
+  align-items: start;
 }
 
 </style>

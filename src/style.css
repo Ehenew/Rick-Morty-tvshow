@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import '/node_modules/flowbite-vue/dist/index.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -58,6 +59,7 @@ button:hover {
 .bg-location-cover {
   background-image: url('/src/assets/img/hero3.jpg');
 }
+
 .bg-episode-cover {
   background-image: url('/src/assets/img/slide-show-1.webp');
 }

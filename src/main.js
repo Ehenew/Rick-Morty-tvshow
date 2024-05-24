@@ -1,10 +1,10 @@
-// import { createApp } from 'vue'
 import { createApp, provide, h, computed } from 'vue';
 import { DefaultApolloClient } from '@vue/apollo-composable';
 import { ApolloClient, InMemoryCache } from '@apollo/client/core';
 import { createWebHistory, createRouter, useRoute } from 'vue-router';
 
 import './style.css';
+import '../node_modules/flowbite-vue/dist/index.css';
 import App from './App.vue';
 
 import Home from './components/HomeViews/Home.vue';
@@ -17,7 +17,7 @@ import CharacterPage from './components/PageViews/CharacterPage.vue';
 import EpisodePage from './components/PageViews/EpisodePage.vue';
 
 
-// Graphql configuration
+
 const cache = new InMemoryCache();
 
 const apolloClient = new ApolloClient({

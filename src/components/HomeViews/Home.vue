@@ -31,9 +31,7 @@ import CreatorsAndStars from './Creators.vue';
             class="flex bg-teal-950  mt-6 relative rounded-md w-96">
             <Carousel />
           </div>
-
-          <div
-            class="details p-2 w-[100%] pt-2">
+          <div class="details p-2 w-[100%] pt-2">
             <div class="flex gap-3 items-center">
               <span
                 class="inline text-orange-400">Gener:</span>
@@ -63,9 +61,10 @@ import CreatorsAndStars from './Creators.vue';
           </div>
         </div>
         <div>
-          <h2 class="text-orange-600 text-2xl">About
+          <h2 class="text-orange-500 text-2xl">About
           </h2>
-          <p class="text-gray-300 mb-6 leading-6">Rick and Morty Tv show is American
+          <p class="text-gray-300 mb-6 leading-6">Rick and
+            Morty is American
             adult
             animated science fiction sitcom aired on
             Cartoon
@@ -94,8 +93,8 @@ import CreatorsAndStars from './Creators.vue';
     <div
       class="footer border-r-4 border-cyan-400 mx-10 flex flex-col items-center bg-[#092E49] gap-4 py-12 rounded-[100%_0%_0%_0%]">
       <div class="links flex gap-3">
-        <a href="#" alt="Github repostitory"
-          target="_blank">
+        <a href="https://github.com/Ehenew/Rick-Morty.git"
+          alt="Github repostitory" target="_blank">
           <i
             class="lni lni-github-original hover:text-gray-400 text-2xl"></i>
         </a>
@@ -103,11 +102,6 @@ import CreatorsAndStars from './Creators.vue';
           alt="Design on Figma" target="_blank">
           <i
             class="lni lni-figma hover:text-gray-400 text-2xl"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/ehenew-amogne-a5b2642b4/"
-          alt="Linkedin profile" target="_blank">
-          <i
-            class="lni lni-linkedin hover:text-gray-400 text-2xl"></i>
         </a>
       </div>
       <p class="text-xl">&copy; 2024 By Ehenew Amogne</p>

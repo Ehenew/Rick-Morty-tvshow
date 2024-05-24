@@ -3,6 +3,8 @@ import { useRoute } from 'vue-router';
 import { useQuery } from "@vue/apollo-composable";
 import gql from "graphql-tag";
 import { formatDate } from "../../main";
+import Spinner from '../Spinner.vue';
+
 
 
 const id = useRoute().params.id;
@@ -33,13 +35,13 @@ const { result, error, loading } = useQuery(characterQuery);
 </script>
 
 <template>
-  <div class="px-4 sm:px-10 py-2 bg-[#3a3737be] h-screen">
-    <div v-if="loading">Loading...</div>
-    <div v-else-if="error">{{ error.message }}</div>
+  <div class="px-4 sm:px-10 py-2 bg-[#3a37375b] h-screen">
+    <div v-if="error">{{ error.message }}</div>
+    <div v-if="loading"><Spinner></Spinner></div>
     <div v-else
       class="grid grid-cols-1 md:grid-cols-[2fr,1.5fr] gap-x-12 gap-y-8 items-start">
       <div
-        class="flex flex-col lg:flex-row gap-3 items-center rounded-md overflow-hidden bg-sky-950 font-medium shadow-[1px_2px_4px] shadow-cyan-600 w-fit">
+        class="flex flex-col lg:flex-row gap-3 items-center rounded-md overflow-hidden bg-[#170f2dfe] font-medium shadow-[1px_2px_4px] shadow-cyan-600 w-fit">
         <img class="w-[100%] lg:w-64"
           :src="result.character.image"
           alt="character Photo">
@@ -73,13 +75,13 @@ const { result, error, loading } = useQuery(characterQuery);
       </div>
 
       <div
-        class="bg-[#31476ee9] px-4 py-2 flex flex-col justify-center rounded-md w-fit">
+        class="bg-[#23334fa1] px-4 py-2 flex flex-col justify-center rounded-md w-fit">
         <h2 class="text-2xl py-1 px-1">Episodes ({{
           result.character.episode.length }})</h2>
         <div class="px-2 overflow-y-scroll max-h-96">
           <div v-for="episode in result.character.episode"
             :key="episode"
-            class="text-gray-300 border-[1px] border-gray-500 bg-[#273651b2] hover:bg-sky-950 cursor-pointer px-4 py-3 rounded-md my-2">
+            class="text-gray-300 border-[1px] border-cyan-600 bg-[#273651b2] hover:bg-sky-950 cursor-pointer px-4 py-3 rounded-md my-2">
             <router-link
               :to="{ name: 'EpisodePage', params: { id: episode.id } }">
               <div>
@@ -119,8 +121,8 @@ const { result, error, loading } = useQuery(characterQuery);
 
       <div
         class="flex gap-4 justify-center bg-[#232323a0]  py-6 px-64 mx-2 absolute bottom-32">
-        <a href="#" alt="Github repostitory"
-          target="_blank">
+        <a href="https://github.com/Ehenew/Rick-Morty.git"
+          alt="Github repostitory" target="_blank">
           <i
             class="lni lni-github-original hover:text-gray-400 text-2xl"></i>
         </a>
