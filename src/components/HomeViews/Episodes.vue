@@ -87,7 +87,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="mx-10 mt-2 sm:p-8 grid grid-cols-[1fr,4fr] gap-6 lg:gap-16 justify-between rounded-lg  h-screen relative border[1px] border-orange-600">
+    class="mx-10 mt-2 sm:p-8 grid grid-cols-[1fr,4fr] gap-6 lg:gap-16 justify-between rounded-lg relative border[1px] border-orange-600">
     <div
       class="bg-[#183E5A] flex flex-col gap-6 items-center px-4 py-5 rounded-lg shadow-[1px_2px_4px] shadow-cyan-600">
       <h2 class="text-center text-2xl mb-5">Season</h2>
@@ -95,7 +95,7 @@ onMounted(() => {
       <div v-for="(episodes, season) in groupedEpisodes"
         :key="season" @click="selectSeason(season)"
         :class="['season-div', { 'bg-orange-900': selectedSeason === season }]"
-        class="w-24  lg:w-36 h-12 flex items-center
+        class="w-24 lg:w-[70%] h-12 flex items-center
         justify-center border-[1px] bg-[#0F334D]  border-green-600
         rounded-lg hover:bg-orange-950 cursor-pointer">
         Season {{ season }}
@@ -116,7 +116,7 @@ onMounted(() => {
           <router-link
             :to="{ name: 'EpisodePage', params: { id: episode.id } }">
             <div
-              class="sm:w-52 md:w-48 h-28 flex flex-col items-center justify-center border-[1px]  border-green-600 rounded-lg relative cursor-pointer bg-[#0f334dc9] hover:bg-[#0E1C36] transition-all px-2">
+              class="sm:w-52 md:w-[70%] h-28 flex flex-col items-center justify-center border-[1px]  border-green-600 rounded-lg relative cursor-pointer bg-[#0f334dc9] hover:bg-[#0E1C36] transition-all px-2">
               <p class="">
                 {{ episode.episode }}
               </p>
