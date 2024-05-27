@@ -10,14 +10,6 @@ const imageList = ref([
   { name: 'Chris Parnell', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Chris_Parnell_by_Gage_Skidmore.jpg/1200px-Chris_Parnell_by_Gage_Skidmore.jpg' },
   { name: 'Kari Wahlgren', image: 'https://cosplay50.susanonyskophoto.com/wp-content/jreviews/photos/original/32/c0/48/30391-Kari-Wahlgren-72-1648140369.jpg' },
 ]);
-// const imageList = ref([
-//   { name: 'Sarah Charkel', image: 'sarah.jpg' },
-//   { name: 'Jusitn Roiland', image: 'justin.jpg' },
-//   { name: 'Spencer Grammer', image: 'grammer.jpg' },
-//   { name: 'Chris Parnell', image: 'parnell.webp' },
-//   { name: 'Raki Wahlgren', image: 'wahlgren.jpg' },
-// ]);
-
 defineComponent({
   name: 'CarouselStars',
   components: {
@@ -32,7 +24,8 @@ defineComponent({
   <Carousel :autoplay="3000" :wrap-around="true">
     <Slide v-for="image in imageList" :key="image"
       class="flex flex-colgap-1">
-      <h2 class="absolute top-0 left-2 bg-slate-500 px-2 text-center font-medium">
+      <h2
+        class="absolute top-0 left-2 bg-slate-500 px-2 text-center font-medium">
         {{ image.name }}
       </h2>
       <img :src="`${image.image}`" alt=""

@@ -11,14 +11,7 @@ const imageList = ref([
   'https://static.independent.co.uk/2021/08/10/13/newFile-5.jpg?quality=75&width=1200&auto=webp',
   'https://i0.wp.com/www.thewrap.com/wp-content/uploads/2023/08/rick-and-morty-5.jpg?fit=1200%2C675&ssl=1',
 ]);
-// const imageList = ref([
-//   'slide-show-1.webp',
-//   'slide-show-2.jpg',
-//   'slide-show-3.jpg',
-//   'slide-show-4.jpg',
-//   'slide-show-5.jpg',
-//   'slide-show-6.jpg',
-// ]);
+
 
 defineComponent({
   name: 'CarouselComp',
@@ -55,6 +48,7 @@ defineComponent({
   position: relative;
   width:400px;
 }
+
 
 .carousel__item {
   height: 230px;
