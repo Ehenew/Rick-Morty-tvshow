@@ -65,7 +65,8 @@ import CreatorsAndStars from './Creators.vue';
             </div>
           </div>
         </div>
-        <div>
+
+        <div class="ml-6">
           <h2 class="text-orange-500 text-2xl">About
           </h2>
           <p class="text-gray-300 mb-6 leading-6">Rick and
