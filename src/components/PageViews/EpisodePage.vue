@@ -33,15 +33,15 @@ const { result, loading, error } = useQuery(episodeQuery);
 </script>
 
 <template>
-  <div
-    class="bg-episode-cover bg-cover justify-center items-center ">
+  <div class="bg-episode-cover bg-cover">
     <div v-if="error">{{ error.message }}</div>
     <div v-if="loading">
       <Spinner></Spinner>
     </div>
     <div v-if="result"
       class="grid grid-cols-1 sm:grid-cols-[3fr,2fr] gap-x-12 gap-y-4 justify-center items-start rounded-md px-6 py-1 md:px-16 text-gray-300 font-medium h-screen bg-[#232323c1]">
-      <div class="flex flex-col justify-center text-xl m-6">
+      <div
+        class="flex flex-col justify-center text-xl m-6">
         <h2 class="text-orange-500 text-3xl mb-1">
           {{ result.episode.name }}
         </h2>

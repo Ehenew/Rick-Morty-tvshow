@@ -60,9 +60,6 @@ button:hover {
   background-image: url('/src/assets/img/hero3.jpg');
 }
 
-.bg-character-cover {
-  background-image: url('/src/assets/img/slide-show-2.jpg');
-}
 .bg-episode-cover {
-  background-image: url('/src/assets/img/slide-show-1.webp');
+  background-image: url('/src/assets/img/hero2.webp');
 }

@@ -8,7 +8,7 @@ const imageList = ref([
   { name: 'Jusitn Roiland', image: 'https://static.wikia.nocookie.net/adventuretimewithfinnandjake/images/2/2f/Justin_Roiland.jpg' },
   { name: 'Spencer Grammer', image: 'https://m.media-amazon.com/images/M/MV5BMTkxNjE0NzAxMF5BMl5BanBnXkFtZTcwNjQyMjQ4Mg@@._V1_FMjpg_UX1000_.jpg' },
   { name: 'Chris Parnell', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Chris_Parnell_by_Gage_Skidmore.jpg/1200px-Chris_Parnell_by_Gage_Skidmore.jpg' },
-  { name: 'Raki Wahlgren', image: 'https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQJMXj0d25Qbwhw4pkepnrUVArs1gLN2d86Mwsdvcx-bYbODf3Me2gs7qqFsKuN41oyQpEssD3faJh8Ud0' },
+  { name: 'Kari Wahlgren', image: 'https://cosplay50.susanonyskophoto.com/wp-content/jreviews/photos/original/32/c0/48/30391-Kari-Wahlgren-72-1648140369.jpg' },
 ]);
 // const imageList = ref([
 //   { name: 'Sarah Charkel', image: 'sarah.jpg' },

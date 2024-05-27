@@ -37,8 +37,9 @@ const { result, loading, error } = useQuery(locationQuery);
     <div v-if="error"> {{ error.message }}
     </div>
     <div v-if="result"
-      class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-300 bg-[#33452283] px-6 sm:px-32 py-6 rounded-lg">
-      <div class="sm:col-start-2 sm:row-start-1 font-semibold text-xl">
+      class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-300 bg-[#33452283] px-6 sm:px-32 py-6 rounded-lg h-screen">
+      <div
+        class="sm:col-start-2 sm:row-start-1 font-semibold text-xl">
         <h2 class="text-2xl text-orange-400 mb-2 font-bold">
           {{ result.location.name}}
         </h2>
