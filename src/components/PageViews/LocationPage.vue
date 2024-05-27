@@ -55,7 +55,7 @@ const { result, loading, error } = useQuery(locationQuery);
       </div>
 
       <div
-        class="col-start-2 bg-[#242c44d3] px-2 py-2 rounded-lg w-96 text-gray-300 border-[1px] border-cyan-600">
+        class="sm:col-start-2 bg-[#242c44d3] px-2 py-2 rounded-lg w-96 text-gray-300 border-[1px] border-cyan-600">
         <div class="flex gap-12 items-center py-1">
           <h2 class="text-xl">
             Residents ({{ result.location.residents.length
@@ -95,7 +95,7 @@ const { result, loading, error } = useQuery(locationQuery);
         </div>
       </div>
 
-      <div class="flex gap-8 sm:row-start-1">
+      <div class="flex gap-8 row-start-1">
         <router-link to="/location">
           <button class="mt-3 px-2 py-1">&larr;
             Back</button>
