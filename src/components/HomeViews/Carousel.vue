@@ -46,7 +46,6 @@ defineComponent({
   overflow: hidden;
   border: 1px solid #05af3e;
   position: relative;
-  width:400px;
 }
 
 

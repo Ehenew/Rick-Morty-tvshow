@@ -3,7 +3,7 @@ import Carousel from './Carousel2.vue';
 </script>
 
 <template>
-  <div class="sm:flex justify-between sm:my-6 my-2 mx-12"
+  <div class="sm:flex justify-between sm:my-6 my-2 mx-6 sm:mx-12"
     id="creators">
     <div class="flex flex-col gap-4">
       <div>

@@ -55,7 +55,7 @@ const { result, loading, error } = useQuery(locationQuery);
       </div>
 
       <div
-        class="sm:col-start-2 bg-[#242c44d3] px-2 py-2 rounded-lg w-96 text-gray-300 border-[1px] border-cyan-600">
+        class="sm:col-start-2 bg-[#242c44d3] px-2 py-2 rounded-lg w-80 sm:w-96 text-gray-300 border-[1px] border-cyan-600">
         <div class="flex gap-12 items-center py-1">
           <h2 class="text-xl">
             Residents ({{ result.location.residents.length
@@ -107,7 +107,7 @@ const { result, loading, error } = useQuery(locationQuery);
       </div>
 
       <div
-        class="flex gap-4 px-10 py-2 ml-4  bg-[#3333334c] w-fit h-fit sm:absolute bottom-6">
+        class="flex gap-4 py-2 sm:ml-4  bg-[#3333334c] w-fit h-fit px-32 sm:absolute bottom-6">
         <a href="https://github.com/Ehenew/Rick-Morty.git"
           alt="Github repostitory" target="_blank">
           <i

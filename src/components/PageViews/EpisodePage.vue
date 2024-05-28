@@ -41,7 +41,7 @@ const { result, loading, error } = useQuery(episodeQuery);
     <div v-if="result"
       class="grid grid-cols-1 sm:grid-cols-[3fr,2fr] gap-x-12 gap-y-4 justify-center items-start rounded-md px-6 py-1 md:px-16 text-gray-300 font-medium h-screen bg-[#232323c1]">
       <div
-        class="flex flex-col justify-center text-xl m-6">
+        class="flex flex-col justify-center text-xl sm:m-6">
         <h2 class="text-orange-500 text-3xl mb-1">
           {{ result.episode.name }}
         </h2>
@@ -61,7 +61,7 @@ const { result, loading, error } = useQuery(episodeQuery);
       </div>
 
       <div
-        class="bg-[#1c2c61d0] px-4 py-2 rounded-lg shadow-sm shadow-cyan-600">
+        class="bg-[#1c2c61d0] px-2 sm:px-4 py-2 rounded-lg shadow-sm shadow-cyan-600">
         <p class="text-2xl">
           Characters ({{ result.episode.characters.length
           }})</p>
@@ -74,7 +74,7 @@ const { result, loading, error } = useQuery(episodeQuery);
             <router-link
               :to="{ name: 'CharacterPage', params: { id: character.id } }">
               <div
-                class="flex gap-6 items center border-b-[1px] bg--950 border-teal-700 hover:bg-[#35477074] py-2 px-4 rounded-md">
+                class="flex gap-6 items-center border-b-[1px] border-teal-700 hover:bg-[#35477074] py-2 px-1 sm:px-4 rounded-md">
                 <img :src="character.image" alt=""
                   class="w-20 h-20 rounded-sm">
                 <div class="flex flex-col text-[#c3bebe]">

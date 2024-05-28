@@ -89,7 +89,7 @@ onMounted(() => {
   <div
     class="mx-10 mt-2 sm:p-8 grid grid-cols-[1fr,4fr] gap-6 lg:gap-16 justify-between rounded-lg relative border[1px] border-orange-600">
     <div
-      class="bg-[#183E5A] flex flex-col gap-6 items-center px-4 py-5 rounded-lg shadow-[1px_2px_4px] shadow-cyan-600">
+      class="bg-[#183E5A] flex flex-col gap-6 items-center px-4 py-5 pb-16 rounded-lg shadow-[1px_2px_4px] shadow-cyan-600">
       <h2 class="text-center text-2xl mb-5">Season</h2>
 
       <div v-for="(episodes, season) in groupedEpisodes"
@@ -106,7 +106,7 @@ onMounted(() => {
     </div>
     <div v-if="error">{{ error.message }} episodes</div>
     <div v-else
-      class="bg-[#183f5ae9] pl-4 pr-6 lg:px-8 py-5 rounded-lg shadow-[1px_2px_4px] shadow-cyan-600">
+      class="bg-[#183f5ae9] pl-4 pr-6 lg:px-8 py-5 rounded-lg shadow-[1px_2px_4px] shadow-cyan-600 pb-16">
       <h2 class="text-center text-2xl mb-5">Episodes</h2>
       <div v-if="selectedSeason !== null"
         class="grid md:grid-cols-2 lg:grid-cols-3 gap-y-6 justify-around max-h-96 overflow-y-scroll">
@@ -116,7 +116,7 @@ onMounted(() => {
           <router-link
             :to="{ name: 'EpisodePage', params: { id: episode.id } }">
             <div
-              class="sm:w-52 md:w-[70%] h-28 flex flex-col items-center justify-center border-[1px]  border-green-600 rounded-lg relative cursor-pointer bg-[#0f334dc9] hover:bg-[#0E1C36] transition-all px-2">
+              class="sm:w-52 md:w-[70%] h-28 xl:w-[80%] flex flex-col items-center justify-center border-[1px]  border-green-600 rounded-lg relative cursor-pointer bg-[#0f334dc9] hover:bg-[#0E1C36] transition-all px-2">
               <p class="">
                 {{ episode.episode }}
               </p>

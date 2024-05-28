@@ -11,7 +11,7 @@ import CreatorsAndStars from './Creators.vue';
   <div class="bg-hero-image h-screen bg-cover">
     <NavBar />
     <div
-      class="px-12 py-4 my-16 sm:bg-[#3130304c] bg-[#313030a2]">
+      class="px-6 sm:px-12 py-4 my-12 sm:my-16 sm:bg-[#3130304c] bg-[#313030a2]">
       <div class="grid lg:grid-cols-[2.2fr,1fr] gap-12">
         <div class="lg:w-[60%]">
           <h1
@@ -33,7 +33,7 @@ import CreatorsAndStars from './Creators.vue';
           </div>
 
           <div
-            class="flex bg-teal-950  mt-6 relative rounded-md w-96">
+            class="flex bg-teal-950  mt-6 relative rounded-md w-80 sm:w-96">
             <Carousel />
           </div>
           <div class="details sm:p-2 w-[100%] pt-3">
@@ -66,7 +66,7 @@ import CreatorsAndStars from './Creators.vue';
           </div>
         </div>
 
-        <div class="ml-6">
+        <div class="sm:ml-6">
           <h2 class="text-orange-500 text-2xl">About
           </h2>
           <p class="text-gray-300 mb-6 leading-6">Rick and

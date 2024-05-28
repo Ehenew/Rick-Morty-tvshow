@@ -57,7 +57,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="m-[40px] mt-4 px-10 py-6 text-center rounded-lg shadow-sm shadow-lime-500 h-screen bg-gradient-to-br from-[#384137a1] to-[#2a4325cb] relative">
+    class="mx-10 mt-4 px-6 sm:px-10 py-6 text-center rounded-lg shadow-sm shadow-lime-500 h-screen bg-gradient-to-br from-[#384137a1] to-[#2a4325cb] relative">
     <h2 class="text-2xl mb-6 text-center">Characters (826)
     </h2>
     <div v-if="loading">
