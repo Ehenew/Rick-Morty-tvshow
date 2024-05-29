@@ -37,16 +37,17 @@ import CreatorsAndStars from './Creators.vue';
             <Carousel />
           </div>
           <div class="details sm:p-2 w-[100%] pt-3">
-            <div class="flex gap-1 sm:gap-3 items-center">
+            <div
+              class="flex gap-1 sm:gap-3 items-center text-xs sm:text-[16px]">
               <span
-                class="inline text-orange-400">Gener:</span>
+                class="inline text-orange-400 text-[16px]">Gener:</span>
               <span
-                class="text-gray-300 border-[1px] border-lime-700 px-2 rounded-full cursor-pointer hover:bg-lime-900">Animation</span>
+                class="text-gray-300 px-1 sm:px-2 border-[1px] border-lime-700 rounded-full cursor-pointer hover:bg-lime-900">Animation</span>
               <span
-                class="text-gray-300 border-[1px] border-lime-700 px-2 rounded-full cursor-pointer hover:bg-lime-900">Scintific
+                class="text-gray-300 px-1 sm:px-2 border-[1px] border-lime-700 rounded-full cursor-pointer hover:bg-lime-900">Scientific
                 Fiction</span>
               <span
-                class="text-gray-300 border-[1px] border-lime-700 px-2 rounded-full cursor-pointer hover:bg-lime-900">Adventure</span>
+                class="text-gray-300 px-1 sm:px-2 border-[1px] border-lime-700 rounded-full cursor-pointer hover:bg-lime-900">Adventure</span>
             </div>
 
             <div class="flex gap-3 ">
@@ -69,7 +70,7 @@ import CreatorsAndStars from './Creators.vue';
         <div class="sm:ml-6">
           <h2 class="text-orange-500 text-2xl">About
           </h2>
-          <p class="text-gray-300 mb-6 leading-6">Rick and
+          <p class="text-gray-300 mb-6 leading-5 sm:leading-6">Rick and
             Morty is American
             adult
             animated science fiction sitcom aired on
