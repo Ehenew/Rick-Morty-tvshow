@@ -42,12 +42,12 @@ import CreatorsAndStars from './Creators.vue';
               <span
                 class="inline text-orange-400 text-[16px]">Gener:</span>
               <span
-                class="text-gray-300 px-1 sm:px-2 border-[1px] border-lime-700 rounded-full cursor-pointer hover:bg-lime-900">Animation</span>
+                class="text-gray-300 px-1 sm:px-2 sm:py-1 border-[1px] border-lime-700 rounded-full cursor-pointer hover:bg-lime-900">Animation</span>
               <span
-                class="text-gray-300 px-1 sm:px-2 border-[1px] border-lime-700 rounded-full cursor-pointer hover:bg-lime-900">Scientific
+                class="text-gray-300 px-1 sm:px-2 sm:py-1 border-[1px] border-lime-700 rounded-full cursor-pointer hover:bg-lime-900">Scientific
                 Fiction</span>
               <span
-                class="text-gray-300 px-1 sm:px-2 border-[1px] border-lime-700 rounded-full cursor-pointer hover:bg-lime-900">Adventure</span>
+                class="text-gray-300 px-1 sm:px-2 sm:py-1 border-[1px] border-lime-700 rounded-full cursor-pointer hover:bg-lime-900">Adventure</span>
             </div>
 
             <div class="flex gap-3 ">
