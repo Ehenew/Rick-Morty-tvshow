@@ -65,7 +65,7 @@ onMounted(() => {
     </div>
     <div v-if="error">{{ error }}</div>
     <div v-else
-      class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 items-start pl-8 pr-12 py-2 overflow-y-scroll h-[80vh]">
+      class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8 items-start pl-8 pr-12 py-2 overflow-y-scroll h-[80vh]">
       <div v-for="character in characters"
         :key="character.id"
         class="text-gray-300 rounded-md flex gap-3 items-start">
