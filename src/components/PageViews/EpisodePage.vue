@@ -1,7 +1,7 @@
 <script setup>
 import { useQuery } from "@vue/apollo-composable";
 import gql from "graphql-tag";
-import { formatDate } from "/src/main.js";
+import { formatDate } from "../../main.js";
 import { useRoute } from 'vue-router';
 import Spinner from '../Spinner.vue';
 
@@ -126,5 +126,4 @@ const { result, loading, error } = useQuery(episodeQuery);
   </div>
 </template>
 <style scoped>
-
 </style>

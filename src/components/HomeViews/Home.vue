@@ -70,7 +70,9 @@ import CreatorsAndStars from './Creators.vue';
         <div class="sm:ml-6">
           <h2 class="text-orange-500 text-2xl">About
           </h2>
-          <p class="text-gray-300 mb-6 leading-5 sm:leading-6">Rick and
+          <p
+            class="text-gray-300 mb-6 leading-5 sm:leading-6">
+            Rick and
             Morty is American
             adult
             animated science fiction sitcom aired on
@@ -98,8 +100,8 @@ import CreatorsAndStars from './Creators.vue';
     <Characters id="characters" class="mb-6" />
     <Locations id="locations" class="mb-16" />
     <div
-      class="footer border-r-4 border-cyan-400 mx-10 flex flex-col items-center bg-[#092E49] gap-4 py-12 rounded-[100%_0%_0%_0%]">
-      <div class="links flex gap-3 mt-6">
+      class="footer border-r-4 border-cyan-400 mx-10 flex flex-col items-center bg-[#092E49] gap-4 py-6 sm:py-12 sm:rounded-[100%_0%_0%_0%]">
+      <div class="links flex gap-3 sm:mt-6">
         <a href="https://github.com/Ehenew/Rick-Morty.git"
           alt="Github repostitory" target="_blank">
           <i
