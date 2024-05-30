@@ -120,7 +120,7 @@ const { result, error, loading } = useQuery(characterQuery);
       </div>
 
       <div
-        class="flex gap-4 justify-center w-[50%] bg-[#232323a0]  py-6 px-36 ml-1 sm:px-64 lg:absolute bottom-32">
+        class="flex gap-4 justify-center w-[50%] bg-[#23232356]  py-6 px-36 ml-1 sm:px-64 lg:absolute bottom-32">
         <a href="https://github.com/Ehenew/Rick-Morty.git"
           alt="Github repostitory" target="_blank">
           <i
