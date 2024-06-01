@@ -57,9 +57,12 @@ onMounted(() => {
   <div class="mx-10 overflow-y-hidden">
     <div
       class="md:mx-36 my-5 px-10 py-3 text-center bg-[#092E49] h-[95vh] rounded-lg border-[1px] border-orange-600 relative">
-      <h2 class="text-center text-2xl mb-5 font-medium">
+      <h2
+        class="text-2xl mb-5 font-medium text-right sm:text-center">
         Locations (126)</h2>
-      <div v-if="loading"><Spinner></Spinner></div>
+      <div v-if="loading">
+        <Spinner></Spinner>
+      </div>
       <div v-if="error">{{ error.message }}</div>
       <div v-else
         class="flex flex-col gap-8 items-center overflow-y-scroll h-[75vh]">
@@ -72,15 +75,15 @@ onMounted(() => {
               {{ location.name }}
             </div>
           </router-link>
-
-          <router-link v-if="!isHomePath" to="/"
-            class="absolute left-8 top-14">
-            <button @click="scrollToTop"
-              class="mt-3 border-[1px] px-4 py-2 border-green-700">
-              Home
-            </button>
-          </router-link>
         </div>
+
+        <router-link v-if="!isHomePath" to="/"
+          class="absolute left-1 top-2 sm:left-8 sm:top-14">
+          <button @click="scrollToTop"
+            class="mt-3 border-[1px] px-3 py-1 border-green-700 bg-inherit">
+            Home
+          </button>
+        </router-link>
       </div>
     </div>
   </div>

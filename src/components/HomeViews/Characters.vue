@@ -58,7 +58,8 @@ onMounted(() => {
 <template>
   <div
     class="mx-10 mt-4 px-6 sm:px-10 py-6 text-center rounded-lg shadow-sm shadow-lime-500 h-screen bg-gradient-to-br from-[#384137a1] to-[#2a4325cb] relative">
-    <h2 class="text-2xl mb-6 text-center">Characters (826)
+    <h2 class="text-2xl mt-2 sm:mt-0 mb-6 text-center">
+      Characters (826)
     </h2>
     <div v-if="loading">
       <Spinner></Spinner>
@@ -86,9 +87,9 @@ onMounted(() => {
     </div>
 
     <router-link v-if="!isHomePath" to="/"
-      class="absolute left-16 top-5">
+      class="absolute left-2 -top-2 sm:left-16 sm:top-5">
       <button @click="scrollToTop"
-        class="mt-3 border-[1px] px-3 py-1 border-lime-700 bg-[#a5a2a225]">
+        class="mt-3 sm:border-[1px] px-3 py-1 border-lime-700 bg-[#a5a2a225]">
         Home
       </button>
     </router-link>
