@@ -129,7 +129,7 @@ onMounted(() => {
         </div>
 
         <router-link v-if="!isHomePath" to="/"
-          class="absolute left-7 top-11 sm:left-50 sm:top-10">
+          class="absolute left-7 top-11 sm:left-[28%]">
           <button @click="scrollToTop"
             class="mt-3 border-[1px] px-3 py-1 border-orange-700 bg-[#352e1fb4] hover:bg-[#31462091]">
             Home
