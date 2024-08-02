@@ -1,6 +1,6 @@
-# Rick and Morty TV Show Website
-
 ## [Go to website](https://rick-morty-tvshow.netlify.app/)
+
+# Rick and Morty TV Show Website
 
 ### Welcome to the Rick and Morty TV Show website, a fan-made project built using Vue 3 and Vite. This website is dedicated to all fans of the animated sci-fi sitcom, Rick and Morty. It provides comprehensive information about the show, including detailed character profiles, episode guides, and much more.
 
